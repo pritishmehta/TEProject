@@ -1,0 +1,84 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #111;
+}
+.transbox {
+  margin: 30px;
+  background-color: lightgray;
+  border: 1px solid black;
+  opacity: 0.9;
+  filter: alpha(opacity=30);
+  border-radius: 50px;
+  width: 50%;
+  padding-bottom: 120px;
+}
+input[type=submit]{
+	border-radius: 4px;
+	background-color: black;
+	color: white;
+	width: 50%;
+	cursor: pointer;
+	border: none;
+	padding: 12px 20px;
+}
+input[type=reset]{
+	border-radius: 4px;
+	background-color: black;
+	color: white;
+	width: 50%;
+	cursor: pointer;
+	border: none;
+	padding: 12px 20px;x
+}
+
+input[type=text]{
+	border-radius: 5px;	
+	border: 1px solid black;
+	box-sizing: border-box;
+	padding: 12px 20px;
+}
+input[type=password]{
+	border-radius: 5px;	
+	border: 1px solid black;
+	box-sizing: border-box;
+	padding: 12px 20px;
+}
+input[type=date]{
+	border-radius: 5px;	
+	border: 1px solid black;
+	box-sizing: border-box;
+	padding: 12px 20px;
+}
+.tarea{
+	border-radius: 5px;	
+	border: 1px solid black;
+	box-sizing: border-box;
+	padding: 12px 20px;
+}
+.error {
+	width: 92%; 
+	margin: 0px auto; 
+	padding: 10px; 
+	border: 1px solid #a94442; 
+	color: #a94442; 
+	background: #f2dede; 
+	border-radius: 5px; 
+	text-align: left;
+}

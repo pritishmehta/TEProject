@@ -1,0 +1,37 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
+<body background="Football_milleniumBlue_shop_preview.png" style="background-position:cover;background-repeat:no repeat;">
+<div class="w3-content w3-section w3-animate-right" style="max-width:500px">
+  <img class="mySlides" src="cinfo.jpg" style="width:600px" height="500px" id="abc1">
+  <img class="mySlides" src="cinfo2.jpg" style="width:600px" height="500px" id="abc2">
+  <img class="mySlides" src="jinfo.jpg" style="width:600px" height="500px" id="abc3">
+  <img class="mySlides" src="jinfo2.png" style="width:600px" height="500px" id="abc4">
+  <img class="mySlides" src="pinfo.jpg" style="width:600px" height="500px" id="abc5">
+  <img class="mySlides" src="pinfo2.jpg" style="width:600px" height="500px" id="abc6">
+</div>
+<script>
+var myIndex = 0;
+carousel();
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000); 
+}
+</script>
+<style>
+#abc1, #abc2, #abc3, #abc4, #abc5, #abc6{
+	box-shadow: -28px 28px 20px -6px #000000;
+}
+</style>
+</body>
+</html>

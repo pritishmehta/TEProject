@@ -1,0 +1,86 @@
+<html>
+<head>
+<link rel=Stylesheet href="style.css" type="text/css">
+<style>
+		#p:active {
+  background-color: #464444;
+  box-shadow: 0 5px #666;
+  transform: translateY(5px);
+}
+#q:active {
+  background-color: #464444;
+  box-shadow: 0 5px #666;
+  transform: translateY(5px);
+}
+</style>
+<script>
+	function regValidate()
+		{
+			if(document.regform.username.value=="")
+				{
+					alert("Enter username!!");
+					document.regform.username.focus();	
+					return(false);
+				}
+			if(document.regform.password.value=="")
+				{
+					alert("Enter password!!");
+					document.regform.password.focus();	
+					return(false);
+				}
+			if(document.regform.password2.value=="")
+				{
+					alert("Confirm password!!");
+					document.regform.password2.focus();	
+					return(false);
+				}
+			if(document.regform.password.value!=document.regform.password2.value)
+				{
+					alert("Passwords do not match!!");
+					document.regform.password.focus();	
+					return(false);
+				}
+			if(document.regform.dob.value=="")
+				{
+					alert("Enter date of birth!!");
+					document.regform.dob.focus();	
+					return(false);
+				}
+			if ( ( regform.gender[0].checked == false ) && ( regform.gender[1].checked == false ) ) 
+				{
+					alert ( "Please choose your Gender: Male or Female" ); 
+					return false;
+				}
+			if(document.regform.address.value=="")
+				{
+					alert("Enter address!!");
+					document.regform.address.focus();	
+					return(false);
+				}
+			return (true);
+		}
+</script>
+</head>
+<body background="blue.jpg">
+<ul>
+  <li><a href="login.html">Login</a></li>
+  <li><a class="active" href="register.html">Registration</a></li>
+</ul>
+<center>
+<form class="transbox" name="regform" onsubmit="return(regValidate())" action="registerbackend.php" method="post"><br><br><br>
+				<center>
+				<h1>REGISTER</h1>
+ 				<font size="3"><b>**All fields are mandatory**</b><br><br></font>
+				<font size="5">Username : </font><input type="text" name="username" placeholder="Enter username..." required><br><br>
+             			<font size="5">Password : </font><input type="password" name="password" placeholder="Enter password..." required><br><br>
+				<font size="5">Confirm Password : </font><input type="password" name="password2" placeholder="Re-enter password..." required><br><br>
+<font size="5">Date of birth : </font><input type="date" name="dob" required><br><br>
+<font size="5">Gender : </font><input type="radio" name="gender" value="Male"><font size="5">Male</font> <input type="radio" name="gender" value="Female"><font size="5">Female</font><br><br>
+<font size="5">Address : </font><br><textarea name="address" rows="5" columns="400" class="tarea" required></textarea><br><br>
+				<input type="submit" id="p"><br><br>
+				<input type="reset" id="q">
+			</center>
+			</form>
+</center>
+</body>
+</html>

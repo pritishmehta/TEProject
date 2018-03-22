@@ -1,0 +1,52 @@
+<html>
+<head>
+<link rel=Stylesheet href="style.css" type="text/css">
+<style>
+		#y:active {
+  background-color: #434242;
+  box-shadow: 0 5px #666;
+  transform: translateY(5px);
+}
+#z:active {
+  background-color: #434242;
+  box-shadow: 0 5px #666;
+  transform: translateY(5px);
+}
+</style>
+<script>
+	function loginValidate()
+		{
+			if(document.loginform.username.value=="")
+				{
+					alert("Enter username!!");
+					document.loginform.username.focus();	
+					return(false);
+				}
+			if(document.loginform.password.value=="")
+				{
+					alert("Enter password!!");
+					document.loginform.password.focus();	
+					return(false);
+				}
+			return (true);
+		}
+</script>
+</head>
+<body background="keyboard.jpg">
+<ul>
+  <li><a class="active" href="login.html">Login</a></li>
+  <li><a href="register.html">Registration</a></li>
+</ul>
+<center>
+	<form class="transbox" name="loginform" onsubmit="return(loginValidate())" action="loginbackend.php" method="post"><br><br><br>
+				<center>
+				<h1>LOGIN</h1>
+				<font size="5">Username : </font><input type="text" name="username" placeholder="Enter username..."><br><br>
+             			<font size="5">Password : </font><input type="password" name="password" placeholder="Enter password..."><br><br>
+				<input type="submit" id="z"><br><br>
+				<input type="reset" id="y"><br>
+				</center>
+	</form>
+</center>
+</body>
+</html>
